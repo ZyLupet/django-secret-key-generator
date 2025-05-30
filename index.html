@@ -5,74 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Django Secret Key Generator</title>
   <meta name="description" content="Generate secure Django SECRET_KEY easily.">
-  <style>
-    body {
-      font-family: sans-serif;
-      background: #f4f4f4;
-      margin: 0;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-    }
-
-    h1 {
-      color: #333;
-      margin-bottom: 1rem;
-    }
-
-    #key-box {
-      background: white;
-      padding: 1rem;
-      border: 1px solid #ccc;
-      font-family: monospace;
-      font-size: 1rem;
-      width: 100%;
-      max-width: 600px;
-      word-break: break-all;
-      margin-bottom: 1rem;
-      border-radius: 6px;
-    }
-
-    .btn {
-      background-color: #007bff;
-      color: white;
-      padding: 0.6rem 1.2rem;
-      font-size: 1rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      margin: 0 0.5rem;
-      transition: background 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: #0056b3;
-    }
-
-    .footer {
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #555;
-      text-align: center;
-    }
-
-    .footer a {
-      color: #007bff;
-      text-decoration: none;
-    }
-
-    .footer a:hover {
-      text-decoration: underline;
-    }
-
-    .btns {
-      display: flex;
-      justify-content: center;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
   <h1>Django Secret Key Generator</h1>
@@ -87,25 +20,6 @@
     <a href="https://basemax.github.io/django-secret-key-generator/" target="_blank">Read more</a>
   </div>
 
-  <script>
-    function generateKey() {
-      const chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)';
-      let key = '';
-      for (let i = 0; i < 50; i++) {
-        key += chars.charAt(Math.floor(Math.random() * chars.length));
-      }
-      document.getElementById('key-box').textContent = key;
-    }
-
-    function copyKey() {
-      const keyText = document.getElementById('key-box').textContent;
-      if (keyText.startsWith('Click')) return alert('Please generate a key first.');
-      navigator.clipboard.writeText(keyText).then(() => {
-        alert('Key copied to clipboard!');
-      }, () => {
-        alert('Failed to copy. Please try manually.');
-      });
-    }
-  </script>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
