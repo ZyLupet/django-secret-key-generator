@@ -2,6 +2,8 @@
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
+🔐 A simple, client-side tool to generate secure Django SECRET_KEYs — fast, open-source, and ready to use in your browser.
+
 Easily generate a secure and random Django `SECRET_KEY` for your Django projects.
 
 🔗 **Live Preview:**  
